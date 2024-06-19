@@ -6,6 +6,6 @@
 //! your crate. You will need to have rust installed via rustup and have the std lib
 //! docs downloaded in order to look at std lib.
 pub mod extract;
-mod locate;
+pub mod locate;
 mod parse;
-mod pprint;
+pub mod pprint;
