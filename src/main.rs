@@ -1,4 +1,4 @@
-use clap::Parser;
+use clap::Clap;
 use rocdoc::locate;
 use rocdoc::parse;
 use std::process;
@@ -8,7 +8,7 @@ const CRATE_ROOT_QUERIES: &[&'static str] = &[".", "crate"];
 /**
  * roc :: command lines rust documentation that rocks
  */
-#[derive(Parser, Debug)]
+#[derive(Clap, Debug)]
 struct Options {
     /// list out child modules under the given path
     #[clap(short = 'l', long = "list")]
@@ -27,7 +27,7 @@ struct Options {
 }
 
 fn main() {
-    let opts: Options = Options::try_parse().unwrap_or_else(|e| {
+    let opts: Options = Options::parse().unwrap_or_else(|e| {
         eprintln!("Error parsing options: {}", e);
         process::exit(1);
     });

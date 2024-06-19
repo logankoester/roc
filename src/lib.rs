@@ -7,5 +7,5 @@
 //! docs downloaded in order to look at std lib.
 pub mod extract;
 pub mod locate;
-mod parse;
+pub mod parse;
 pub mod pprint;
