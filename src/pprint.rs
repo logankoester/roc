@@ -17,7 +17,7 @@ const SPACER: &'static str = "  ";
 const DEFAULT_TERM_WIDTH: usize = 90;
 
 /// A simple colored header for sections
-pub(crate) fn header(s: &str, color: &str) -> String {
+pub fn header(s: &str, color: &str) -> String {
     format!("{} {}", "::".color(color).bold(), s.bold())
 }
 
