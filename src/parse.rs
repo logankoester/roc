@@ -1,7 +1,7 @@
 /*!
  * Parse the contents of rustdoc generated HTML files
  */
-use crate::{
+pub use crate::{
     locate, pprint,
     pprint::{header, ENUM_HEADING_COLOR, SECTION_HEADING_COLOR},
 };
