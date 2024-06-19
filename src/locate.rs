@@ -1,7 +1,7 @@
 /*!
  * Locate the generated docs that we have available within the current workspace
  */
-use crate::pprint::{header, pprint_as_columns, CRATE_LIST_HEADING_COLOR};
+pub use crate::pprint::{header, pprint_as_columns, CRATE_LIST_HEADING_COLOR};
 use std::fs;
 use std::{env, ffi, path, process};
 

@@ -6,9 +6,9 @@ use std::cmp;
 use term_size;
 
 // Colors used when outputting with color
-pub(crate) const CRATE_LIST_HEADING_COLOR: &'static str = "blue";
-pub(crate) const SECTION_HEADING_COLOR: &'static str = "yellow";
-pub(crate) const ENUM_HEADING_COLOR: &'static str = "green";
+pub const CRATE_LIST_HEADING_COLOR: &'static str = "blue";
+pub const SECTION_HEADING_COLOR: &'static str = "yellow";
+pub const ENUM_HEADING_COLOR: &'static str = "green";
 
 // Space between columns when pretty printing
 const SPACER: &'static str = "  ";
@@ -22,7 +22,7 @@ pub fn header(s: &str, color: &str) -> String {
 }
 
 /// Print a vec of strings as column spaced rows
-pub(crate) fn pprint_as_columns(elems: Vec<String>) -> String {
+pub fn pprint_as_columns(elems: Vec<String>) -> String {
     let col_width = elems.iter().map(String::len).max().unwrap();
     let per_row = max_width() / (col_width + 1);
 
@@ -96,7 +96,7 @@ impl Row {
 }
 
 /// A very simple plain text table that knows the width of each of its columns.
-pub(crate) struct Table {
+pub struct Table {
     rows: Vec<Row>,
     column_widths: Vec<usize>,
 }
